@@ -37,12 +37,12 @@ $(GRACE):
 	@$(CC) $(CFLAGS) $(GRASRC) -o $@
 
 $(SULLY): $(SULLYDIR)
-	$(CC) $(CFLAGS) $(SULSRC) -o $(SULLYDIR)/$@
+	@$(CC) $(CFLAGS) $(SULSRC) -o $(SULLYDIR)/$@
 
 $(SULLYDIR):
 	@$(MKDIR) $@
 
-fclean:
+clean:
 	$(RM) -rf $(COLLEEN) $(GRACE) $(GKIDSRC) $(SULLYDIR)
 
-re: fclean all
+re: clean all
